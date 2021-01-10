@@ -1,0 +1,72 @@
+$title: #141414;
+$blue: #485bfa;
+$orange: #ffac5f;
+
+%avenir-700 {
+  font-family: "AvenirNextCyr-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%avenir-600 {
+  font-family: "AvenirNextCyr-Demi", sans-serif;
+  font-weight: 600;
+}
+
+%avenir-450 {
+  font-family: "AvenirNextCyr-Medium", sans-serif;
+  font-weight: 450;
+}
+
+%bebas-700 {
+  font-family: "BebasNeue-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%btn-orange {
+  padding: 15px 38px;
+  background-color: $orange;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  @extend %avenir-700;
+  font-size: 16px;
+  line-height: 19px;
+  color: $title;
+}
+
+
+%decor-title {
+  color: $blue;
+  position: relative;
+  padding-right: 22px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 1px;
+    bottom: 7px;
+    left: 0;
+    background-color: $blue;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 10px;
+    right: 4px;
+    background-image: url(../images/icons/arrow-up.svg);
+  }
+}
+
+%underline {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    bottom: 0px;
+    left: 0;
+    background-color: $blue;
+  }
+}
