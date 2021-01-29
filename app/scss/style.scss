@@ -886,7 +886,8 @@
   &::before {
     position: absolute;
     content: "";
-    top: 23px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 21px;
     width: 8px;
     height: 30px;
@@ -1446,4 +1447,106 @@
   }
 }
 
+.offers {
+  padding: 25px 0 100px;
+  &__title {
+    margin-bottom: 19px;
+  }
+  &__text {
+    margin-bottom: 25px;
+  }
+  &__warning {
+    margin-bottom: 26px;
+    span {
+      @extend %avenir-600;
+    }
+    a {
+      color: $blue;
+      position: relative;
+      @extend %underline;
+      &::before {
+        width: 112px;
+      }
+    }
+  }
+}
+
+.offers_bascket {
+  &-titles {
+    padding-bottom: 11px;
+    border-bottom: 2px solid $title;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-title {
+    @extend %avenir-700;
+    font-size: 16px;
+    line-height: 22px;
+    color: $title;
+    min-width: 200px;
+  }
+  &-btn{
+    @extend %btn-orange;
+  }
+}
+.offers_bascket-list {
+  margin: 15px 0 33px;
+}
+.offers_bascket-item + .offers_bascket-item {
+  margin-top: 10px;
+}
+.offers_bascket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  span,
+  &__title,
+  &__price {
+    min-width: 200px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  &__title {
+    @extend %avenir-600;
+    color: $title;
+    font-size: 15px;
+    line-height: 21px;
+    span {
+      @extend %avenir-450;
+      font-size: 13px;
+      line-height: 18px;
+      color: #575757;
+    }
+  }
+  &__color {
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(../images/icons/transparent.svg);
+    }
+  }
+  .white::before {
+    background-image: url(../images/icons/white.svg);
+  }
+  &__price {
+    text-decoration: none;
+    color: $blue;
+    font-size: 16px;
+    line-height: 22px;
+    span {
+      text-decoration: line-through;
+      color: #575757;
+      margin-left: 5px;
+    }
+  }
+}
 @import "media";
