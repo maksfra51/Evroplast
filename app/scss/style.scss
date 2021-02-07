@@ -35,10 +35,11 @@
     line-height: 19px;
     color: $blue;
     position: relative;
+    cursor: pointer;
     &::before {
       content: "";
       position: absolute;
-      width: 123px;
+      width: 128px;
       height: 1px;
       bottom: 0px;
       left: 0;
@@ -1485,7 +1486,7 @@
     color: $title;
     min-width: 200px;
   }
-  &-btn{
+  &-btn {
     @extend %btn-orange;
   }
 }
@@ -1549,4 +1550,5 @@
     }
   }
 }
+
 @import "media";
