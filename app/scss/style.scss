@@ -1015,7 +1015,7 @@
     line-height: 56px;
     color: $title;
     margin-bottom: 22px;
-    span {
+    a {
       @extend %decor-title;
       &::before {
         width: 225px;
